@@ -2,6 +2,12 @@
 // statute numbers protected from translation; the prototype ships English and Hindi.
 export const STRINGS = {
   en: {
+    chat: {
+      open: 'Ask Ayushkar', title: 'Ayushkar assistant', close: 'Close assistant', send: 'Send',
+      placeholder: 'Ask a question about your product', sentAs: 'Sent as',
+      gistNote: '"In short" is a curated summary. The quoted provision is the authority.',
+      foot: 'Information, not legal advice. Ingredient names are removed before sending.',
+    },
     tagline: 'IP and regulatory guidance for Ayurvedic products',
     nav: { check: 'Product check', ask: 'Ask the law', claims: 'Claim check', biopiracy: 'Biopiracy screen', timeline: 'Law over time', proofs: 'Proofs' },
     asOf: 'Law as of',
@@ -50,6 +56,12 @@ export const STRINGS = {
     factName: { goal: 'goal', use: 'how it is sold', route: 'route', form: 'preparation', entity: 'who makes it', sourcing: 'sourcing', practitioner: 'practitioner status', market: 'export market', match: 'formula match' },
   },
   hi: {
+    chat: {
+      open: 'आयुषकर से पूछें', title: 'आयुषकर सहायक', close: 'सहायक बंद करें', send: 'भेजें',
+      placeholder: 'अपने उत्पाद के बारे में प्रश्न पूछें', sentAs: 'इस रूप में भेजा गया',
+      gistNote: '"संक्षेप में" हमारी टीम का सारांश है; उद्धृत प्रावधान ही आधिकारिक है।',
+      foot: 'यह जानकारी है, कानूनी सलाह नहीं। भेजने से पहले सामग्री के नाम हटा दिए जाते हैं।',
+    },
     tagline: 'आयुर्वेदिक उत्पादों के लिए बौद्धिक संपदा और नियामक मार्गदर्शन',
     nav: { check: 'उत्पाद जाँच', ask: 'कानून से पूछें', claims: 'दावा जाँच', biopiracy: 'बायोपायरेसी जाँच', timeline: 'समय के साथ कानून', proofs: 'प्रमाण' },
     asOf: 'इस तारीख का कानून',

@@ -1,7 +1,9 @@
-# IP-SAKTI Sahayak (prototype)
+# Ayushkar (prototype)
+
+Live: https://ayushkar-app.vercel.app
 
 A classification-first, citation-verified IP and regulatory assistant for Ayurveda.
-Smart India Hackathon 2026, problem statement **SIH26045** (Ministry of Ayush, All India Institute of Ayurveda). Team **The Council**.
+Smart India Hackathon 2026, problem statement **SIH26045** (IP-SAKTI Sahayak) (Ministry of Ayush, All India Institute of Ayurveda). Team **The Council**.
 
 > Information, not legal advice. This is an idea-round prototype: the formulation index and legal corpus are deliberately small and every record is flagged for verification against the official text.
 
@@ -10,6 +12,7 @@ Smart India Hackathon 2026, problem statement **SIH26045** (Ministry of Ayush, A
 | Screen | Idea it demonstrates |
 |---|---|
 | **Product check** | *Statutory three-way test*: the ingredient list is matched against First Schedule (AFI) formula records to apply D&C Act s.3(a) / s.3(h)(i). The result shows the matched record or the exact ingredient, proportion or dosage form that breaks the match. Then *fewest-questions triage* asks only the questions that can change the advice for your goal, and a *deterministic protection dossier* covers category, licence, patent, prior art, ABS, brand, advertising and export, with cited provisions, forms and authorities, plus a computed *what would change this answer* list. |
+| **Assistant chat** (side panel, every page) | A conversational assistant over the same cited engine. It keeps context ("what about internationally?" re-asks your last question in the other panel), gives a curated plain-language "in short" line plus the quoted provision, explains what changed in the law up to the selected date, sends classification questions to Product check, and abstains with a facilitator brief when out of scope. Ingredient names are redacted before sending. |
 | **Ask the law** | Extractive, cited answers from two separate indexes (India / International), a confidence indicator, abstention with a facilitator brief, and redaction of ingredient names before anything is sent. |
 | **Claim check** | Screens advertising or label copy against the DMR Act Schedule and misleading-claim patterns. |
 | **Biopiracy screen** | Compares a foreign filing's claim text with codified formulations and documented traditional uses (Turmeric and Neem case replays, plus synthetic test filings). |
@@ -18,7 +21,7 @@ Smart India Hackathon 2026, problem statement **SIH26045** (Ministry of Ayush, A
 
 **Formulation Vault.** The formula match runs in the browser. The server receives only a redacted fact sheet (`match`, answers, date). Every outbound request passes a guard that blocks it if it contains a formulation term, and the *What left your device* panel shows each payload byte for byte. The server audit log stores hashes and provision IDs, never content.
 
-No language model decides anything. Classification, triage and the dossier are rule tables, and answers quote retrieved provisions.
+No language model decides anything. Classification, triage and the dossier are rule tables, answers quote retrieved provisions, and the chat's plain-language lines are curated by the team.
 
 ## Architecture
 
@@ -28,7 +31,8 @@ browser (React + Vite)
         | redacted fact sheet / redacted question
 FastAPI (Python)
   triage (information gain over advice signatures)
-  dossier (rule table)          retrieval: BM25, India index | International index (separate)
+  dossier (rule table)   chat (intents + context over retrieval)
+  retrieval: BM25, India index | International index (separate)
   as-of resolver (versioned provisions)   claim check   biopiracy screen   change radar   audit log
 data/  ingredients.json  formulations.json  corpus.json  screens.json   (shared by both sides)
 ```

@@ -80,3 +80,48 @@ def test_audit_log_stores_hashes_not_content():
     client.post("/api/ask", json={"question": "Can I patent my classical churna?", "jurisdiction": "india"})
     entry = client.get("/api/audit").json()[0]
     assert set(entry) == {"at", "endpoint", "request_sha256", "bytes", "provisions"}
+
+
+def _chat(message, **context):
+    return client.post("/api/chat", json={"message": message, "context": context}).json()
+
+
+def test_chat_answers_with_citations_and_curated_gist():
+    r = _chat("Can I patent my classical churna?")
+    assert r["intent"] == "answer" and r["citations"][0]["family"] == "pat_s3p" and r["gist_is_curated"]
+
+
+def test_chat_follow_up_switches_jurisdiction_without_mixing():
+    r = _chat("What about internationally?", last_question="Can I patent my classical churna?")
+    assert r["jurisdiction"] == "international"
+    assert all(c["jurisdiction"] == "international" for c in r["citations"])
+
+
+def test_chat_abstains_out_of_scope_and_offers_brief():
+    r = _chat("what is the gst on churna")
+    assert r["abstained"] and not r["citations"] and any(a.get("brief") for a in r["actions"])
+
+
+def test_chat_sends_classification_to_product_check():
+    r = _chat("Is my formula classical?")
+    assert r["intent"] == "classify" and r["actions"][0]["href"] == "#/check"
+
+
+def test_chat_changes_respect_as_of():
+    early = _chat("What changed recently?", as_of="2024-12-01")
+    assert not any("ABS Regulation 2025" in i for i in early["items"])
+    later = _chat("What changed recently?", as_of="2026-01-01")
+    assert any("ABS Regulation 2025" in i for i in later["items"])
+
+
+def test_every_chat_suggestion_is_answerable():
+    seen, queue = set(), ["hi"]
+    while queue:
+        q = queue.pop()
+        if q in seen or q.startswith("What about"):
+            continue
+        seen.add(q)
+        r = _chat(q)
+        assert not r.get("abstained"), f"suggested question abstains: {q}"
+        queue.extend(r["suggestions"])
+    assert len(seen) > 8

@@ -11,7 +11,8 @@ export const INGREDIENTS = ingredientsData.ingredients
 export const FORMULATIONS = formulationsData.formulations
 export const PLANNED_RECORDS = formulationsData.planned_records
 
-const todayISO = () => new Date().toISOString().slice(0, 10)
+// Local calendar date (not UTC), so the default matches the user's day in IST.
+const todayISO = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}` }
 
 // Every call to the server goes through the vault guard.
 export async function api(path, body) {

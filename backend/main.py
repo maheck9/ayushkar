@@ -1,4 +1,4 @@
-"""IP-SAKTI Sahayak prototype API."""
+"""Ayushkar prototype API (SIH26045)."""
 import hashlib
 import json
 from datetime import date
@@ -9,9 +9,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 from . import audit, data
-from .engine import dossier, retrieval, screens, triage
+from .engine import chat, dossier, retrieval, screens, triage
 
-app = FastAPI(title="IP-SAKTI Sahayak API", version="0.1.0")
+app = FastAPI(title="Ayushkar API", version="0.1.0")
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
 Match = Literal["classical", "proprietary", "outside"]
@@ -29,6 +29,17 @@ class AskIn(BaseModel):
     question: str = Field(max_length=600)
     jurisdiction: Literal["india", "international"]
     as_of: Optional[str] = None
+
+
+class ChatContext(BaseModel):
+    jurisdiction: Literal["india", "international"] = "india"
+    last_question: Optional[str] = Field(default=None, max_length=600)
+    as_of: Optional[str] = None
+
+
+class ChatIn(BaseModel):
+    message: str = Field(max_length=600)
+    context: ChatContext = Field(default_factory=ChatContext)
 
 
 class ClaimsIn(BaseModel):
@@ -79,6 +90,15 @@ def build_dossier(body: FactSheet):
 def ask(body: AskIn):
     out = retrieval.ask(body.question, body.jurisdiction, _as_of(body.as_of))
     audit.record("ask", body.model_dump(), [c["id"] for c in out["citations"]])
+    return out
+
+
+@app.post("/api/chat")
+def chat_reply(body: ChatIn):
+    ctx = body.context.model_dump()
+    ctx["as_of"] = _as_of(ctx.get("as_of"))
+    out = chat.reply(body.message, ctx)
+    audit.record("chat", body.model_dump(), [c["id"] for c in out["citations"]])
     return out
 
 
