@@ -2,6 +2,8 @@
 
 Live: https://ayushkar-app.vercel.app
 
+**New here or recording the demo?** Read [DEMO_GUIDE.md](DEMO_GUIDE.md): every feature explained in plain words, with a demo script.
+
 A classification-first, citation-verified IP and regulatory assistant for Ayurveda.
 Smart India Hackathon 2026, problem statement **SIH26045** (IP-SAKTI Sahayak) (Ministry of Ayush, All India Institute of Ayurveda). Team **The Council**.
 
