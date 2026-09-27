@@ -1,0 +1,24 @@
+{
+  "_note": "Prototype First Schedule formulation index: 9 records transcribed from commonly published Ayurvedic Formulary of India (AFI) formulae. Proportions are in parts by weight. Each record is marked verify=true until checked against the PCIM&H Formulary Specification PDF (page reference to be added). MVP target is the 100-150 most-manufactured AFI/API formulations.",
+  "planned_records": 150,
+  "formulations": [
+    {"id": "afi_triphala_churna", "name": "Triphala Churna", "book": "Ayurvedic Formulary of India, Part I", "dosage_form": "churna", "route": "oral",
+     "ingredients": [{"id": "haritaki", "parts": 1}, {"id": "bibhitaki", "parts": 1}, {"id": "amalaki", "parts": 1}], "verify": true},
+    {"id": "afi_trikatu_churna", "name": "Trikatu Churna", "book": "Ayurvedic Formulary of India, Part I", "dosage_form": "churna", "route": "oral",
+     "ingredients": [{"id": "shunthi", "parts": 1}, {"id": "maricha", "parts": 1}, {"id": "pippali", "parts": 1}], "verify": true},
+    {"id": "afi_sitopaladi_churna", "name": "Sitopaladi Churna", "book": "Ayurvedic Formulary of India, Part I", "dosage_form": "churna", "route": "oral",
+     "ingredients": [{"id": "sharkara", "parts": 16}, {"id": "vamshalochana", "parts": 8}, {"id": "pippali", "parts": 4}, {"id": "ela", "parts": 2}, {"id": "tvak", "parts": 1}], "verify": true},
+    {"id": "afi_talisadi_churna", "name": "Talisadi Churna", "book": "Ayurvedic Formulary of India, Part I", "dosage_form": "churna", "route": "oral",
+     "ingredients": [{"id": "talisa", "parts": 1}, {"id": "maricha", "parts": 2}, {"id": "shunthi", "parts": 3}, {"id": "pippali", "parts": 4}, {"id": "vamshalochana", "parts": 5}, {"id": "ela", "parts": 0.5}, {"id": "tvak", "parts": 0.5}, {"id": "sharkara", "parts": 32}], "verify": true},
+    {"id": "afi_hingvashtaka_churna", "name": "Hingvashtaka Churna", "book": "Ayurvedic Formulary of India, Part I", "dosage_form": "churna", "route": "oral",
+     "ingredients": [{"id": "shunthi", "parts": 1}, {"id": "maricha", "parts": 1}, {"id": "pippali", "parts": 1}, {"id": "ajamoda", "parts": 1}, {"id": "saindhava", "parts": 1}, {"id": "jiraka", "parts": 1}, {"id": "krishna_jiraka", "parts": 1}, {"id": "hingu", "parts": 1}], "verify": true},
+    {"id": "afi_avipattikara_churna", "name": "Avipattikara Churna", "book": "Ayurvedic Formulary of India, Part I", "dosage_form": "churna", "route": "oral",
+     "ingredients": [{"id": "shunthi", "parts": 1}, {"id": "maricha", "parts": 1}, {"id": "pippali", "parts": 1}, {"id": "haritaki", "parts": 1}, {"id": "bibhitaki", "parts": 1}, {"id": "amalaki", "parts": 1}, {"id": "musta", "parts": 1}, {"id": "vida_lavana", "parts": 1}, {"id": "vidanga", "parts": 1}, {"id": "ela", "parts": 1}, {"id": "tejapatra", "parts": 1}, {"id": "lavanga", "parts": 11}, {"id": "trivrit", "parts": 44}, {"id": "sharkara", "parts": 66}], "verify": true},
+    {"id": "afi_balachaturbhadra_churna", "name": "Balachaturbhadra Churna", "book": "Ayurvedic Formulary of India, Part I", "dosage_form": "churna", "route": "oral",
+     "ingredients": [{"id": "musta", "parts": 1}, {"id": "pippali", "parts": 1}, {"id": "ativisha", "parts": 1}, {"id": "karkatashringi", "parts": 1}], "verify": true},
+    {"id": "afi_dashamoola_kwatha", "name": "Dashamoola Kwatha Churna", "book": "Ayurvedic Formulary of India, Part I", "dosage_form": "kwatha churna", "route": "oral",
+     "ingredients": [{"id": "bilva", "parts": 1}, {"id": "agnimantha", "parts": 1}, {"id": "shyonaka", "parts": 1}, {"id": "patala", "parts": 1}, {"id": "gambhari", "parts": 1}, {"id": "brihati", "parts": 1}, {"id": "kantakari", "parts": 1}, {"id": "shalaparni", "parts": 1}, {"id": "prishniparni", "parts": 1}, {"id": "gokshura", "parts": 1}], "verify": true},
+    {"id": "afi_triphala_guggulu", "name": "Triphala Guggulu", "book": "Ayurvedic Formulary of India, Part I", "dosage_form": "guggulu (vati)", "route": "oral",
+     "ingredients": [{"id": "haritaki", "parts": 1}, {"id": "bibhitaki", "parts": 1}, {"id": "amalaki", "parts": 1}, {"id": "pippali", "parts": 1}, {"id": "guggulu", "parts": 5}], "verify": true}
+  ]
+}

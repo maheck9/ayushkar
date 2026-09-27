@@ -1,0 +1,70 @@
+{
+  "dmr_schedule": {
+    "_note": "Conditions from the Schedule to the DMR Act, 1954 used by the claim check, with common marketing phrasings. Lexicon is a screening aid; the Act's text decides.",
+    "terms": [
+      {"condition": "Diabetes", "phrases": ["diabetes", "diabetic", "blood sugar", "sugar control", "control sugar", "madhumeha", "prameha"]},
+      {"condition": "Obesity", "phrases": ["obesity", "weight loss", "lose weight", "fat loss", "fat burn", "fat burner", "slimming"]},
+      {"condition": "High or low blood pressure", "phrases": ["blood pressure", "hypertension", "high bp", "low bp"]},
+      {"condition": "Heart diseases", "phrases": ["heart disease", "heart blockage", "heart attack", "cardiac disease"]},
+      {"condition": "Cancer", "phrases": ["cancer", "tumour", "tumor", "tumours", "tumors"]},
+      {"condition": "Sexual impotence", "phrases": ["impotence", "erectile", "sexual power", "sexual stamina", "virility", "libido booster"]},
+      {"condition": "Leucoderma", "phrases": ["leucoderma", "vitiligo", "white patches"]},
+      {"condition": "Gall stones, kidney stones and bladder stones", "phrases": ["kidney stone", "kidney stones", "gall stone", "gallstone", "gallstones", "bladder stone"]},
+      {"condition": "Rheumatism", "phrases": ["rheumatism", "rheumatic"]},
+      {"condition": "Epilepsy", "phrases": ["epilepsy", "fits", "seizures"]},
+      {"condition": "Paralysis", "phrases": ["paralysis", "infantile paralysis"]},
+      {"condition": "Cataract / Glaucoma", "phrases": ["cataract", "glaucoma"]},
+      {"condition": "Deafness / Blindness", "phrases": ["deafness", "blindness"]},
+      {"condition": "Tuberculosis", "phrases": ["tuberculosis"]},
+      {"condition": "Leprosy", "phrases": ["leprosy"]},
+      {"condition": "Goitre", "phrases": ["goitre", "goiter"]},
+      {"condition": "Stature of persons", "phrases": ["increase height", "height growth", "grow taller"]},
+      {"condition": "Form and structure of the female bust", "phrases": ["breast enlargement", "bust enlargement", "bust size"]},
+      {"condition": "Sterility in women", "phrases": ["female infertility", "sterility in women"]},
+      {"condition": "Fevers (in general)", "phrases": ["cures fever", "fever cure"]},
+      {"condition": "Venereal diseases", "phrases": ["venereal", "sexually transmitted"]}
+    ],
+    "misleading_patterns": [
+      {"pattern": "100%", "why": "Absolute efficacy claim"},
+      {"pattern": "guarantee", "why": "Guaranteed result"},
+      {"pattern": "permanent cure", "why": "Permanent cure claim"},
+      {"pattern": "cures all", "why": "Universal cure claim"},
+      {"pattern": "no side effect", "why": "Absolute safety claim"},
+      {"pattern": "miracle", "why": "Miracle claim"},
+      {"pattern": "instant relief", "why": "Instant result claim"},
+      {"pattern": "clinically proven", "why": "Needs evidence on file; check the study supports the exact claim"}
+    ]
+  },
+
+  "biopiracy_cases": [
+    {"id": "turmeric", "title": "Turmeric for wound healing", "record": "US Patent 5,401,504 (granted 1995)",
+     "claim_text": "A method of promoting healing of a wound in a patient, which consists essentially of administering a wound-healing agent consisting of an effective amount of turmeric powder to the patient.",
+     "outcome": "CSIR requested re-examination citing ancient Sanskrit texts and a 1953 paper; the USPTO revoked the claims in 1997.",
+     "source": "https://www.mondaq.com/india/patent/586384/traditional-knowledge-and-patent-issues-an-overview-of-turmeric-basmati-neem-cases", "real": true},
+    {"id": "neem", "title": "Neem oil as a fungicide", "record": "European Patent EP 0436257",
+     "claim_text": "A method for controlling fungi on plants comprising applying a hydrophobic extracted neem oil from Azadirachta indica seeds.",
+     "outcome": "Revoked by the EPO Opposition Division in 2000 (upheld on appeal in 2005) for lack of novelty given prior public use in India.",
+     "source": "https://www.mondaq.com/india/patent/586384/traditional-knowledge-and-patent-issues-an-overview-of-turmeric-basmati-neem-cases", "real": true},
+    {"id": "synthetic_triphala", "title": "Synthetic test filing: bowel regularity composition", "record": "Synthetic example (not a real patent)",
+     "claim_text": "An oral composition for improving bowel regularity comprising powdered fruits of Terminalia chebula, Terminalia bellirica and Emblica officinalis in a 1:1:1 ratio.",
+     "outcome": "Constructed to test the screen: the claim restates a codified formulation.", "source": null, "real": false},
+    {"id": "synthetic_ashwagandha", "title": "Synthetic test filing: stress-relief capsule", "record": "Synthetic example (not a real patent)",
+     "claim_text": "A capsule comprising Withania somnifera root extract standardised to withanolides together with piperine for reducing stress and improving sleep.",
+     "outcome": "Constructed to test the screen: one traditional ingredient with a known traditional use, plus an isolated compound.", "source": null, "real": false}
+  ],
+
+  "radar": [
+    {"id": "rad_gratk", "instrument": "gratk", "source": "https://www.wipo.int/en/web/treaties/ip/gratk/summary_gratk", "detected_on": "2026-09-20",
+     "before": "Contracting Parties: 2 ratifications (Malawi, Uganda). Not in force.",
+     "after": "Contracting Parties: 4 ratifications (Malawi, Uganda, Albania, Peru). Not in force.",
+     "status": "pending", "effect": "Updates the treaty status widget. Still adopted, not in force: no answer changes."},
+    {"id": "rad_hague", "instrument": "hague", "source": "https://ipindia.gov.in/international-cooperation/Hague-Agreement-Oct2024.html", "detected_on": "2026-09-22",
+     "before": "India is not a Contracting Party to the Hague Agreement.",
+     "after": "India is not a Contracting Party. A January 2026 DPIIT concept note proposes Designs Act amendments as groundwork for possible accession.",
+     "status": "pending", "effect": "Adds a note to the Hague provision. Status unchanged."},
+    {"id": "rad_abs2025", "instrument": "abs2025", "source": "http://nbaindia.org", "detected_on": "2025-05-02",
+     "before": "Guidelines on ABS, 2014: slabs 0.1% / 0.2% / 0.5% of ex-factory sale price.",
+     "after": "ABS Regulation, 2025: exempt up to Rs 5 crore; 0.2% / 0.4% / 0.6% slabs above.",
+     "status": "approved", "effect": "New provision version abs_2025_slabs; abs_2014_slabs given an end date."}
+  ]
+}

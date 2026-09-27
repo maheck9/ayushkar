@@ -1,0 +1,884 @@
+{
+ "_note": "Prototype corpus. 'quoted' = statutory wording transcribed for the demo; 'summary' = prototype paraphrase that the ingestion pipeline will replace with verbatim text from the official source. verify=true rows are open items in the claims register. Two separate indexes (india, international) are built from this file; nothing is shared between them.",
+ "instruments": [
+  {
+   "id": "dca1940",
+   "jurisdiction": "india",
+   "title": "Drugs and Cosmetics Act, 1940",
+   "short": "D&C Act",
+   "url": "https://www.indiacode.nic.in/handle/123456789/2409?sam_handle=123456789%2F1362",
+   "status_history": [
+    {
+     "from": "1940-04-10",
+     "status": "in_force"
+    }
+   ]
+  },
+  {
+   "id": "dcr1945",
+   "jurisdiction": "india",
+   "title": "Drugs and Cosmetics Rules, 1945 (Part XVI: ASU drugs)",
+   "short": "D&C Rules",
+   "url": "https://cdsco.gov.in/opencms/opencms/en/Acts-and-rules/",
+   "status_history": [
+    {
+     "from": "1945-12-21",
+     "status": "in_force"
+    }
+   ]
+  },
+  {
+   "id": "patents1970",
+   "jurisdiction": "india",
+   "title": "Patents Act, 1970",
+   "short": "Patents Act",
+   "url": "https://indiankanoon.org/doc/874310/",
+   "status_history": [
+    {
+     "from": "1972-04-20",
+     "status": "in_force"
+    }
+   ]
+  },
+  {
+   "id": "ayush_guidelines2025",
+   "jurisdiction": "india",
+   "title": "CGPDTM Guidelines for Examination of AYUSH-Related Inventions, 2025",
+   "short": "AYUSH Exam. Guidelines",
+   "url": "https://ipindia.gov.in/writereaddata/Portal/IPOGuidelinesManuals/Guidelines_for_Examination_of_Ayush_Related_Inventions.pdf",
+   "status_history": [
+    {
+     "from": "2025-09-23",
+     "status": "in_force"
+    }
+   ],
+   "verify": true
+  },
+  {
+   "id": "ajantha2013",
+   "jurisdiction": "india",
+   "title": "Ajantha Pharma Ltd v. Allergan Inc (IPAB, 2013)",
+   "short": "Ajantha v. Allergan",
+   "url": "https://www.mondaq.com/india/patent/1088182/understanding-synergy-in-patent-applications-in-india-must-1+1=3",
+   "status_history": [
+    {
+     "from": "2013-01-01",
+     "status": "in_force",
+     "note": "case law"
+    }
+   ],
+   "verify": true
+  },
+  {
+   "id": "bda2002",
+   "jurisdiction": "india",
+   "title": "Biological Diversity Act, 2002 (as amended by the Biological Diversity (Amendment) Act, 2023)",
+   "short": "BD Act",
+   "url": "https://egazette.gov.in/WritereadData/2023/247815.pdf",
+   "status_history": [
+    {
+     "from": "2003-02-05",
+     "status": "in_force"
+    },
+    {
+     "from": "2024-04-01",
+     "status": "in_force",
+     "note": "2023 amendment in force (commencement date to be confirmed in Gazette)"
+    }
+   ],
+   "verify": true
+  },
+  {
+   "id": "abs2014",
+   "jurisdiction": "india",
+   "title": "Guidelines on Access to Biological Resources and Associated Knowledge and Benefit Sharing Regulations, 2014",
+   "short": "ABS Guidelines 2014",
+   "url": "http://nbaindia.org",
+   "status_history": [
+    {
+     "from": "2014-11-21",
+     "status": "in_force"
+    },
+    {
+     "from": "2025-05-01",
+     "status": "superseded",
+     "note": "replaced by ABS Regulation 2025"
+    }
+   ],
+   "verify": true
+  },
+  {
+   "id": "abs2025",
+   "jurisdiction": "india",
+   "title": "Biological Diversity (Access and Benefit Sharing) Regulations, 2025",
+   "short": "ABS Regulation 2025",
+   "url": "https://www.lexorbis.com/decoding-the-new-regime-for-biodiversity-access-benefit-sharing/",
+   "status_history": [
+    {
+     "from": "2025-05-01",
+     "status": "in_force",
+     "note": "notification date approximate; confirm in Gazette"
+    }
+   ],
+   "verify": true
+  },
+  {
+   "id": "tm1999",
+   "jurisdiction": "india",
+   "title": "Trade Marks Act, 1999",
+   "short": "TM Act",
+   "url": "https://ipindia.gov.in",
+   "status_history": [
+    {
+     "from": "2003-09-15",
+     "status": "in_force"
+    }
+   ]
+  },
+  {
+   "id": "gi1999",
+   "jurisdiction": "india",
+   "title": "Geographical Indications of Goods (Registration and Protection) Act, 1999",
+   "short": "GI Act",
+   "url": "https://ipindia.gov.in",
+   "status_history": [
+    {
+     "from": "2003-09-15",
+     "status": "in_force"
+    }
+   ]
+  },
+  {
+   "id": "dmr1954",
+   "jurisdiction": "india",
+   "title": "Drugs and Magic Remedies (Objectionable Advertisements) Act, 1954",
+   "short": "DMR Act",
+   "url": "https://www.indiacode.nic.in",
+   "status_history": [
+    {
+     "from": "1954-04-30",
+     "status": "in_force"
+    }
+   ]
+  },
+  {
+   "id": "fssai_aahara2022",
+   "jurisdiction": "india",
+   "title": "Food Safety and Standards (Ayurveda Aahara) Regulations, 2022",
+   "short": "FSS Ayurveda Aahara Regs",
+   "url": "https://www.fssai.gov.in",
+   "status_history": [
+    {
+     "from": "2022-05-06",
+     "status": "in_force"
+    }
+   ],
+   "verify": true
+  },
+  {
+   "id": "ndct2019",
+   "jurisdiction": "india",
+   "title": "New Drugs and Clinical Trials Rules, 2019",
+   "short": "NDCT Rules",
+   "url": "https://cdsco.gov.in",
+   "status_history": [
+    {
+     "from": "2019-03-19",
+     "status": "in_force"
+    }
+   ],
+   "verify": true
+  },
+  {
+   "id": "tkdl",
+   "jurisdiction": "india",
+   "title": "Traditional Knowledge Digital Library (registry)",
+   "short": "TKDL",
+   "url": "https://www.tkdl.res.in",
+   "status_history": [
+    {
+     "from": "2001-01-01",
+     "status": "in_force",
+     "note": "database, not a statute"
+    }
+   ]
+  },
+  {
+   "id": "trips",
+   "jurisdiction": "international",
+   "title": "Agreement on Trade-Related Aspects of Intellectual Property Rights (TRIPS)",
+   "short": "TRIPS",
+   "url": "https://www.wto.org/english/docs_e/legal_e/27-trips.pdf",
+   "status_history": [
+    {
+     "from": "1995-01-01",
+     "status": "in_force"
+    }
+   ]
+  },
+  {
+   "id": "cbd",
+   "jurisdiction": "international",
+   "title": "Convention on Biological Diversity",
+   "short": "CBD",
+   "url": "https://www.cbd.int/convention/text",
+   "status_history": [
+    {
+     "from": "1993-12-29",
+     "status": "in_force"
+    }
+   ]
+  },
+  {
+   "id": "nagoya",
+   "jurisdiction": "international",
+   "title": "Nagoya Protocol on Access and Benefit-sharing",
+   "short": "Nagoya Protocol",
+   "url": "https://www.cbd.int/abs/",
+   "status_history": [
+    {
+     "from": "2014-10-12",
+     "status": "in_force"
+    }
+   ]
+  },
+  {
+   "id": "gratk",
+   "jurisdiction": "international",
+   "title": "WIPO Treaty on Intellectual Property, Genetic Resources and Associated Traditional Knowledge (GRATK)",
+   "short": "WIPO GRATK",
+   "url": "https://www.wipo.int/en/web/treaties/ip/gratk/summary_gratk",
+   "status_history": [
+    {
+     "from": "2024-05-24",
+     "status": "adopted_not_in_force",
+     "note": "enters into force 3 months after 15 ratifications/accessions; 4 ratifications reported (Malawi, Uganda, Albania, Peru); India has not signed"
+    }
+   ],
+   "verify": true
+  },
+  {
+   "id": "pct",
+   "jurisdiction": "international",
+   "title": "Patent Cooperation Treaty (PCT)",
+   "short": "PCT",
+   "url": "https://www.wipo.int/pct/en/",
+   "status_history": [
+    {
+     "from": "1978-01-24",
+     "status": "in_force",
+     "note": "India party since 1998"
+    }
+   ]
+  },
+  {
+   "id": "madrid",
+   "jurisdiction": "international",
+   "title": "Madrid Protocol (international trade marks)",
+   "short": "Madrid Protocol",
+   "url": "https://www.wipo.int/madrid/en/",
+   "status_history": [
+    {
+     "from": "1995-12-01",
+     "status": "in_force",
+     "note": "India party since 2013"
+    }
+   ]
+  },
+  {
+   "id": "hague",
+   "jurisdiction": "international",
+   "title": "Hague Agreement (international industrial designs)",
+   "short": "Hague Agreement",
+   "url": "https://ipindia.gov.in/international-cooperation/Hague-Agreement-Oct2024.html",
+   "status_history": [
+    {
+     "from": "1928-06-01",
+     "status": "in_force",
+     "note": "India is not a Contracting Party; accession under consideration"
+    }
+   ],
+   "verify": true
+  },
+  {
+   "id": "budapest",
+   "jurisdiction": "international",
+   "title": "Budapest Treaty (deposit of microorganisms)",
+   "short": "Budapest Treaty",
+   "url": "https://www.wipo.int/treaties/en/registration/budapest/",
+   "status_history": [
+    {
+     "from": "1980-08-19",
+     "status": "in_force",
+     "note": "India party since 2001"
+    }
+   ]
+  },
+  {
+   "id": "us_dshea",
+   "jurisdiction": "international",
+   "title": "United States: Dietary Supplement Health and Education Act, 1994 (DSHEA)",
+   "short": "US DSHEA",
+   "url": "https://www.fda.gov/food/dietary-supplements",
+   "status_history": [
+    {
+     "from": "1994-10-25",
+     "status": "in_force"
+    }
+   ]
+  },
+  {
+   "id": "eu_thmpd",
+   "jurisdiction": "international",
+   "title": "European Union: Traditional Herbal Medicinal Products Directive 2004/24/EC",
+   "short": "EU THMPD",
+   "url": "https://eur-lex.europa.eu/eli/dir/2004/24/oj",
+   "status_history": [
+    {
+     "from": "2004-04-30",
+     "status": "in_force"
+    }
+   ]
+  },
+  {
+   "id": "eu_novel_food",
+   "jurisdiction": "international",
+   "title": "European Union: Novel Food Regulation (EU) 2015/2283",
+   "short": "EU Novel Food",
+   "url": "https://eur-lex.europa.eu/eli/reg/2015/2283/oj",
+   "status_history": [
+    {
+     "from": "2018-01-01",
+     "status": "in_force"
+    }
+   ]
+  }
+ ],
+ "provisions": [
+  {
+   "id": "dca_s3a",
+   "instrument": "dca1940",
+   "section": "s.3(a)",
+   "title": "Ayurvedic, Siddha or Unani drug",
+   "text_kind": "quoted",
+   "text": "\"Ayurvedic, Siddha or Unani drug\" includes all medicines intended for internal or external use for or in the diagnosis, treatment, mitigation or prevention of disease or disorder in human beings or animals, and manufactured exclusively in accordance with the formulae described in, the authoritative books of Ayurvedic, Siddha and Unani Tibb systems of medicine, specified in the First Schedule.",
+   "keywords": "classical medicine generic formulation authoritative book first schedule definition category classify ayurvedic drug churna vati classical formula book",
+   "valid_from": "1964-02-01",
+   "jurisdiction": "india"
+  },
+  {
+   "id": "dca_s3h",
+   "instrument": "dca1940",
+   "section": "s.3(h)(i)",
+   "title": "Patent or proprietary medicine (ASU)",
+   "text_kind": "quoted",
+   "text": "\"patent or proprietary medicine\" means, in relation to Ayurvedic, Siddha or Unani Tibb systems of medicine, all formulations containing only such ingredients mentioned in the formulae described in the authoritative books of Ayurveda, Siddha or Unani Tibb systems of medicine specified in the First Schedule, but does not include a medicine which is administered by parenteral route and also a formulation included in the authoritative books as specified in clause (a).",
+   "keywords": "proprietary medicine patent medicine new combination ingredients first schedule parenteral classify category",
+   "valid_from": "1982-02-01",
+   "jurisdiction": "india"
+  },
+  {
+   "id": "dca_s3aaa",
+   "instrument": "dca1940",
+   "section": "s.3(aaa)",
+   "title": "Cosmetic",
+   "text_kind": "quoted",
+   "text": "\"cosmetic\" means any article intended to be rubbed, poured, sprinkled or sprayed on, or introduced into, or otherwise applied to, the human body or any part thereof for cleansing, beautifying, promoting attractiveness, or altering the appearance, and includes any article intended for use as a component of cosmetic.",
+   "keywords": "cosmetic skin beauty cream soap face herbal cosmetic definition",
+   "valid_from": "1964-02-01",
+   "jurisdiction": "india"
+  },
+  {
+   "id": "dca_sch1",
+   "instrument": "dca1940",
+   "section": "First Schedule",
+   "title": "Authoritative books of Ayurveda",
+   "text_kind": "summary",
+   "text": "The First Schedule lists the authoritative books of the Ayurveda, Siddha and Unani Tibb systems. For Ayurveda it includes classical texts such as Charaka Samhita, Sushruta Samhita and Ashtanga Hridaya, together with the Ayurvedic Formulary of India and the Ayurvedic Pharmacopoeia of India.",
+   "keywords": "first schedule authoritative books charaka sushruta ashtanga hridaya formulary pharmacopoeia afi api list",
+   "valid_from": "1964-02-01",
+   "verify": true,
+   "jurisdiction": "india"
+  },
+  {
+   "id": "dcr_r153",
+   "instrument": "dcr1945",
+   "section": "r.153 and r.158-B",
+   "title": "Licence to manufacture ASU drugs",
+   "text_kind": "summary",
+   "text": "A manufacturer of Ayurvedic, Siddha or Unani drugs applies to the State Licensing Authority in Form 24-D, and the licence is granted in Form 25-D. Rule 158-B sets the evidence the authority asks for: classical formulations rely on the authoritative book reference, while patent or proprietary medicines must support safety and effectiveness as prescribed.",
+   "keywords": "licence license manufacture form 24-d 25-d state licensing authority sla ayush drug licence manufacturing",
+   "valid_from": "2008-01-01",
+   "verify": true,
+   "jurisdiction": "india"
+  },
+  {
+   "id": "ndct_phyto",
+   "instrument": "ndct2019",
+   "section": "r.2 (definition)",
+   "title": "Phytopharmaceutical drug",
+   "text_kind": "summary",
+   "text": "A phytopharmaceutical drug is a purified and standardised fraction, with defined minimum bio-active or phytochemical compounds assessed qualitatively and quantitatively, of an extract of a medicinal plant or its part, for internal or external use in the diagnosis, treatment, mitigation or prevention of disease. It is approved as a new drug by the Central Licensing Authority (CDSCO).",
+   "keywords": "phytopharmaceutical standardised extract fraction marker compounds cdsco new drug approval clinical trial phytopharmaceuticals",
+   "valid_from": "2019-03-19",
+   "verify": true,
+   "jurisdiction": "india"
+  },
+  {
+   "id": "fssai_aahara",
+   "instrument": "fssai_aahara2022",
+   "section": "Regs. 2-4",
+   "title": "Ayurveda Aahara",
+   "text_kind": "summary",
+   "text": "Ayurveda Aahara covers foods prepared according to recipes, ingredients and processes described in the authoritative books of Ayurveda listed in the Regulations. Such products need an FSSAI licence, must follow the labelling rules, and are foods, not medicines: they may not claim to cure or treat disease.",
+   "keywords": "food nutraceutical ayurveda aahar aahara fssai foscos supplement health food label",
+   "valid_from": "2022-05-06",
+   "verify": true,
+   "jurisdiction": "india"
+  },
+  {
+   "id": "pat_s2_1_j",
+   "instrument": "patents1970",
+   "section": "s.2(1)(j)",
+   "title": "Invention",
+   "text_kind": "quoted",
+   "text": "\"invention\" means a new product or process involving an inventive step and capable of industrial application.",
+   "keywords": "invention patentable novelty inventive step industrial application patent",
+   "valid_from": "2005-01-01",
+   "jurisdiction": "india"
+  },
+  {
+   "id": "pat_s3e",
+   "instrument": "patents1970",
+   "section": "s.3(e)",
+   "title": "Mere admixture",
+   "text_kind": "quoted",
+   "text": "a substance obtained by a mere admixture resulting only in the aggregation of the properties of the components thereof or a process for producing such substance.",
+   "keywords": "admixture combination synergy aggregation not invention patent herbal mixture polyherbal new combination known herb herbs patentable polyherbal mixing",
+   "valid_from": "1972-04-20",
+   "jurisdiction": "india"
+  },
+  {
+   "id": "pat_s3p",
+   "instrument": "patents1970",
+   "section": "s.3(p)",
+   "title": "Traditional knowledge",
+   "text_kind": "quoted",
+   "text": "an invention which in effect, is traditional knowledge or which is an aggregation or duplication of known properties of traditionally known component or components.",
+   "keywords": "traditional knowledge patent bar classical formulation not invention known properties patentable classical churna vati formula known herb herbs ancient text",
+   "valid_from": "2002-05-20",
+   "jurisdiction": "india"
+  },
+  {
+   "id": "pat_s10_4",
+   "instrument": "patents1970",
+   "section": "s.10(4)(ii)(D)",
+   "title": "Disclosure of biological material",
+   "text_kind": "summary",
+   "text": "Where an invention uses biological material, the complete specification must disclose the source and geographical origin of that biological material.",
+   "keywords": "disclosure source origin biological material specification patent application",
+   "valid_from": "2005-01-01",
+   "verify": true,
+   "jurisdiction": "india"
+  },
+  {
+   "id": "pat_s25",
+   "instrument": "patents1970",
+   "section": "s.25(1)(j)-(k)",
+   "title": "Opposition on biological material and traditional knowledge",
+   "text_kind": "summary",
+   "text": "Any person may oppose a patent application on the grounds that the source or geographical origin of biological material was not disclosed or was wrongly mentioned, or that the claimed invention is anticipated by knowledge, oral or otherwise, available within any local or indigenous community in India or elsewhere.",
+   "keywords": "opposition pre-grant traditional knowledge anticipated indigenous community biopiracy challenge",
+   "valid_from": "2005-01-01",
+   "verify": true,
+   "jurisdiction": "india"
+  },
+  {
+   "id": "ayush_g_tkdl",
+   "instrument": "ayush_guidelines2025",
+   "section": "Guidelines (search)",
+   "title": "TKDL search and disclosure for AYUSH inventions",
+   "text_kind": "summary",
+   "text": "For AYUSH-related patent applications, examiners are to search the Traditional Knowledge Digital Library and other authoritative databases for prior art, and applicants are to disclose the source and origin of biological resources used.",
+   "keywords": "ayush patent examination tkdl search prior art examiner guidelines 2025 disclosure",
+   "valid_from": "2025-09-23",
+   "verify": true,
+   "jurisdiction": "india"
+  },
+  {
+   "id": "case_ajantha",
+   "instrument": "ajantha2013",
+   "section": "Holding",
+   "title": "Synergy under s.3(e)",
+   "text_kind": "summary",
+   "text": "A combination claim avoids the s.3(e) bar only if the specification shows a significant difference in efficacy, that is, a synergistic effect beyond the sum of the known components. Comparative efficacy data should be in the specification or supplied in reply to the examination report.",
+   "keywords": "synergy combination efficacy data 3(e) evidence combination index patent herbal combination known herbs patentable prove synergy",
+   "valid_from": "2013-01-01",
+   "verify": true,
+   "jurisdiction": "india"
+  },
+  {
+   "id": "tkdl_access",
+   "instrument": "tkdl",
+   "section": "Access policy",
+   "title": "Who can search the full TKDL",
+   "text_kind": "summary",
+   "text": "The public TKDL portal offers a limited search. The full database is available to patent offices under non-disclosure access agreements, so a complete TKDL search is performed by the patent examiner.",
+   "keywords": "tkdl traditional knowledge digital library search prior art access patent office defensive",
+   "valid_from": "2001-01-01",
+   "jurisdiction": "india"
+  },
+  {
+   "id": "bda_s3",
+   "instrument": "bda2002",
+   "section": "s.3",
+   "title": "Foreign-controlled entities need NBA approval",
+   "text_kind": "summary",
+   "text": "A person who is not a citizen of India, or a body corporate with non-Indian participation in its share capital or management, must obtain the approval of the National Biodiversity Authority before obtaining any biological resource occurring in India or associated knowledge.",
+   "keywords": "foreign company nba approval access biological resource non-resident entity",
+   "valid_from": "2003-02-05",
+   "verify": true,
+   "jurisdiction": "india"
+  },
+  {
+   "id": "bda_s6_v2002",
+   "instrument": "bda2002",
+   "section": "s.6",
+   "title": "IPR approval (original Act)",
+   "text_kind": "summary",
+   "text": "No person may apply for any intellectual property right, in or outside India, for an invention based on research or information on a biological resource obtained from India without the previous approval of the National Biodiversity Authority. For patents, the approval may be obtained after acceptance of the patent application but before sealing.",
+   "keywords": "ipr approval nba patent biological resource before applying sealing",
+   "valid_from": "2003-02-05",
+   "valid_to": "2024-03-31",
+   "verify": true,
+   "family": "bda_s6",
+   "jurisdiction": "india"
+  },
+  {
+   "id": "bda_s6_v2023",
+   "instrument": "bda2002",
+   "section": "s.6",
+   "title": "IPR approval (as amended 2023)",
+   "text_kind": "summary",
+   "text": "Approval of the National Biodiversity Authority is required before the grant of an intellectual property right (not before applying) for an invention based on research on a biological resource or associated knowledge obtained from India. Indian applicants register with the Authority; foreign-controlled applicants need approval.",
+   "keywords": "ipr approval nba patent before grant registration amended 2023 biological resource",
+   "valid_from": "2024-04-01",
+   "verify": true,
+   "family": "bda_s6",
+   "jurisdiction": "india"
+  },
+  {
+   "id": "bda_s7_v2002",
+   "instrument": "bda2002",
+   "section": "s.7",
+   "title": "Prior intimation for commercial use (original Act)",
+   "text_kind": "summary",
+   "text": "An Indian citizen or Indian-registered body must give prior intimation to the State Biodiversity Board before obtaining any biological resource for commercial utilisation. This does not apply to local people and communities of the area, including growers and cultivators of biodiversity, and vaids and hakims practising indigenous medicine.",
+   "keywords": "prior intimation state biodiversity board commercial utilisation exemption vaid hakim cultivator abs",
+   "valid_from": "2004-07-01",
+   "valid_to": "2024-03-31",
+   "verify": true,
+   "family": "bda_s7",
+   "jurisdiction": "india"
+  },
+  {
+   "id": "bda_s7_v2023",
+   "instrument": "bda2002",
+   "section": "s.7",
+   "title": "Prior intimation for commercial use (as amended 2023)",
+   "text_kind": "summary",
+   "text": "Prior intimation to the State Biodiversity Board is required before obtaining a biological resource for commercial utilisation. The requirement does not apply to codified traditional knowledge, cultivated medicinal plants and their products, local people and communities including growers and cultivators, or vaids, hakims and registered AYUSH practitioners practising indigenous medicine, including for livelihood. The cultivated-plant exemption depends on a certificate of origin.",
+   "keywords": "prior intimation state biodiversity board exemption cultivated medicinal plants certificate of origin codified traditional knowledge ayush practitioner abs amended",
+   "valid_from": "2024-04-01",
+   "verify": true,
+   "family": "bda_s7",
+   "jurisdiction": "india"
+  },
+  {
+   "id": "abs_2014_slabs",
+   "instrument": "abs2014",
+   "section": "Reg. 3",
+   "title": "Benefit sharing for commercial use (2014)",
+   "text_kind": "summary",
+   "text": "Benefit sharing for commercial utilisation was set as a share of annual gross ex-factory sale price, graded by turnover: about 0.1% up to Rs 1 crore, 0.2% from Rs 1 to 3 crore and 0.5% above Rs 3 crore.",
+   "keywords": "benefit sharing slab percentage turnover ex-factory 2014 abs regulation",
+   "valid_from": "2014-11-21",
+   "valid_to": "2025-04-30",
+   "verify": true,
+   "family": "abs_slabs",
+   "jurisdiction": "india"
+  },
+  {
+   "id": "abs_2025_slabs",
+   "instrument": "abs2025",
+   "section": "Regs. (slabs)",
+   "title": "Benefit sharing for commercial use (2025)",
+   "text_kind": "summary",
+   "text": "Turnover up to Rs 5 crore is exempt from benefit sharing. Above that, benefit sharing is a share of annual gross ex-factory sale price: 0.2% for Rs 5-50 crore, 0.4% for Rs 50-250 crore and 0.6% above Rs 250 crore. Higher rates apply to high-value or threatened resources.",
+   "keywords": "benefit sharing slab percentage turnover exempt 5 crore ex-factory 2025 abs regulation",
+   "valid_from": "2025-05-01",
+   "verify": true,
+   "family": "abs_slabs",
+   "jurisdiction": "india"
+  },
+  {
+   "id": "tm_s9",
+   "instrument": "tm1999",
+   "section": "s.9",
+   "title": "Absolute grounds for refusal",
+   "text_kind": "summary",
+   "text": "A trade mark is refused if it lacks distinctive character, or consists only of words that describe the kind, quality, intended purpose or geographical origin of the goods, or of words customary in the trade. Plain names of herbs or classical formulations used for those goods fall here.",
+   "keywords": "trademark brand name descriptive generic refusal distinctive classical name register",
+   "valid_from": "2003-09-15",
+   "verify": true,
+   "jurisdiction": "india"
+  },
+  {
+   "id": "tm_s11",
+   "instrument": "tm1999",
+   "section": "s.11",
+   "title": "Relative grounds for refusal",
+   "text_kind": "summary",
+   "text": "A trade mark is refused if it is identical or deceptively similar to an earlier mark for similar goods, so that confusion is likely. Search the register (class 5 for medicines, class 3 for cosmetics, classes 29/30 for foods) before adopting a brand.",
+   "keywords": "trademark similar deceptively confusion earlier mark search class 5 class 3 brand",
+   "valid_from": "2003-09-15",
+   "verify": true,
+   "jurisdiction": "india"
+  },
+  {
+   "id": "gi_s25",
+   "instrument": "gi1999",
+   "section": "s.25",
+   "title": "Trade marks containing a geographical indication",
+   "text_kind": "summary",
+   "text": "The Registrar of Trade Marks refuses or invalidates a trade mark that contains or consists of a registered geographical indication for goods not originating in that territory, where use would mislead the public about the true place of origin.",
+   "keywords": "geographical indication gi tag trademark origin misleading refuse brand",
+   "valid_from": "2003-09-15",
+   "verify": true,
+   "jurisdiction": "india"
+  },
+  {
+   "id": "gi_s22",
+   "instrument": "gi1999",
+   "section": "s.22",
+   "title": "Infringement of a registered GI",
+   "text_kind": "summary",
+   "text": "A registered geographical indication is infringed by a person who is not an authorised user and uses it in a way that suggests the goods originate in the registered territory when they do not.",
+   "keywords": "geographical indication infringement authorised user gi tag",
+   "valid_from": "2003-09-15",
+   "verify": true,
+   "jurisdiction": "india"
+  },
+  {
+   "id": "dmr_s3",
+   "instrument": "dmr1954",
+   "section": "s.3",
+   "title": "Prohibited advertisements for certain diseases",
+   "text_kind": "summary",
+   "text": "No advertisement may refer to a drug in terms that suggest its use for procuring miscarriage, maintaining or improving sexual capacity, correcting menstrual disorders, or diagnosing, curing, mitigating, treating or preventing any disease or condition specified in the Schedule.",
+   "keywords": "advertisement claim cure disease schedule diabetes cancer obesity prohibited marketing label advertise cures diabetes cure",
+   "valid_from": "1954-04-30",
+   "verify": true,
+   "jurisdiction": "india"
+  },
+  {
+   "id": "dmr_s4",
+   "instrument": "dmr1954",
+   "section": "s.4",
+   "title": "Misleading advertisements",
+   "text_kind": "summary",
+   "text": "No advertisement relating to a drug may directly or indirectly give a false impression regarding the true character of the drug, make a false claim for the drug, or be otherwise false or misleading in any material particular.",
+   "keywords": "misleading advertisement false claim guaranteed permanent cure marketing",
+   "valid_from": "1954-04-30",
+   "verify": true,
+   "jurisdiction": "india"
+  },
+  {
+   "id": "trips_a27_1",
+   "instrument": "trips",
+   "section": "Art. 27.1",
+   "title": "Patentable subject matter",
+   "text_kind": "quoted",
+   "text": "patents shall be available for any inventions, whether products or processes, in all fields of technology, provided that they are new, involve an inventive step and are capable of industrial application.",
+   "keywords": "patentable subject matter invention novelty inventive step wto trips patent",
+   "valid_from": "1995-01-01",
+   "jurisdiction": "international"
+  },
+  {
+   "id": "trips_a27_3b",
+   "instrument": "trips",
+   "section": "Art. 27.3(b)",
+   "title": "Plants, animals and plant varieties",
+   "text_kind": "summary",
+   "text": "Members may exclude from patentability plants and animals other than micro-organisms, and essentially biological processes for producing them, but must protect plant varieties by patents, an effective sui generis system, or both.",
+   "keywords": "plants animals exclusion plant variety sui generis patent trips",
+   "valid_from": "1995-01-01",
+   "jurisdiction": "international"
+  },
+  {
+   "id": "trips_a22",
+   "instrument": "trips",
+   "section": "Art. 22",
+   "title": "Geographical indications",
+   "text_kind": "summary",
+   "text": "Members must provide legal means to prevent use of a geographical indication that misleads the public as to the geographical origin of goods.",
+   "keywords": "geographical indication gi origin misleading trips international",
+   "valid_from": "1995-01-01",
+   "jurisdiction": "international"
+  },
+  {
+   "id": "cbd_a15",
+   "instrument": "cbd",
+   "section": "Art. 15",
+   "title": "Access to genetic resources",
+   "text_kind": "summary",
+   "text": "States have sovereign rights over their genetic resources. Access is subject to the prior informed consent of the providing country and to mutually agreed terms, with fair and equitable sharing of the benefits of use.",
+   "keywords": "access genetic resources sovereign prior informed consent mutually agreed terms benefit sharing international abs",
+   "valid_from": "1993-12-29",
+   "jurisdiction": "international"
+  },
+  {
+   "id": "cbd_a8j",
+   "instrument": "cbd",
+   "section": "Art. 8(j)",
+   "title": "Traditional knowledge",
+   "text_kind": "summary",
+   "text": "Parties are to respect, preserve and maintain knowledge, innovations and practices of indigenous and local communities, and encourage equitable sharing of benefits from their use, subject to national legislation.",
+   "keywords": "traditional knowledge indigenous local communities benefit sharing international",
+   "valid_from": "1993-12-29",
+   "jurisdiction": "international"
+  },
+  {
+   "id": "nagoya_a5",
+   "instrument": "nagoya",
+   "section": "Art. 5",
+   "title": "Fair and equitable benefit-sharing",
+   "text_kind": "summary",
+   "text": "Benefits from the utilisation of genetic resources, and from subsequent applications and commercialisation, are to be shared fairly and equitably with the providing Party on mutually agreed terms.",
+   "keywords": "benefit sharing genetic resources mutually agreed terms international abs nagoya",
+   "valid_from": "2014-10-12",
+   "jurisdiction": "international"
+  },
+  {
+   "id": "nagoya_a7",
+   "instrument": "nagoya",
+   "section": "Art. 7",
+   "title": "Access to traditional knowledge",
+   "text_kind": "summary",
+   "text": "Each Party is to take measures so that traditional knowledge associated with genetic resources held by indigenous and local communities is accessed with their prior informed consent or approval and involvement, on mutually agreed terms.",
+   "keywords": "traditional knowledge access prior informed consent indigenous communities nagoya international",
+   "valid_from": "2014-10-12",
+   "jurisdiction": "international"
+  },
+  {
+   "id": "gratk_a3",
+   "instrument": "gratk",
+   "section": "Art. 3",
+   "title": "Disclosure requirement",
+   "text_kind": "summary",
+   "text": "Where a claimed invention is based on genetic resources, each Contracting Party is to require patent applicants to disclose the country of origin or the source of the genetic resources; where it is based on associated traditional knowledge, to disclose the Indigenous Peoples or local community that provided it, or the source.",
+   "keywords": "disclosure origin genetic resources traditional knowledge patent application wipo gratk treaty status in force ratification",
+   "valid_from": "2024-05-24",
+   "jurisdiction": "international"
+  },
+  {
+   "id": "pct_overview",
+   "instrument": "pct",
+   "section": "Arts. 3, 22, 39",
+   "title": "International patent application",
+   "text_kind": "summary",
+   "text": "A single international application under the PCT has effect in all designated Contracting States. The applicant enters the national phase in each chosen country, generally 30 months from the priority date, where the patent is examined and granted under national law.",
+   "keywords": "international patent application pct national phase 30 months priority file abroad",
+   "valid_from": "1978-01-24",
+   "jurisdiction": "international"
+  },
+  {
+   "id": "madrid_overview",
+   "instrument": "madrid",
+   "section": "Arts. 2-3",
+   "title": "International trade mark registration",
+   "text_kind": "summary",
+   "text": "The owner of a national trade mark application or registration can file one international application through the office of origin and designate other Madrid members, each of which examines the mark under its own law.",
+   "keywords": "international trademark madrid brand register abroad export",
+   "valid_from": "1995-12-01",
+   "jurisdiction": "international"
+  },
+  {
+   "id": "hague_overview",
+   "instrument": "hague",
+   "section": "Overview",
+   "title": "International design registration",
+   "text_kind": "summary",
+   "text": "The Hague system allows one international application to register an industrial design in multiple Contracting Parties. Applicants must be connected to a Contracting Party; India is not yet a party.",
+   "keywords": "industrial design packaging international design registration hague",
+   "valid_from": "1928-06-01",
+   "verify": true,
+   "jurisdiction": "international"
+  },
+  {
+   "id": "budapest_overview",
+   "instrument": "budapest",
+   "section": "Art. 3",
+   "title": "Deposit of microorganisms",
+   "text_kind": "summary",
+   "text": "A deposit of a microorganism with any International Depositary Authority is recognised by all Contracting States for the purposes of patent procedure.",
+   "keywords": "microorganism deposit depositary authority patent microbial strain probiotic budapest",
+   "valid_from": "1980-08-19",
+   "jurisdiction": "international"
+  },
+  {
+   "id": "us_dshea_overview",
+   "instrument": "us_dshea",
+   "section": "21 U.S.C. 321(ff), 343(r)(6), 350b",
+   "title": "Dietary supplements in the US",
+   "text_kind": "summary",
+   "text": "Dietary supplements do not need FDA pre-market approval, but may not claim to diagnose, treat, cure or prevent disease. Structure/function claims are allowed with the FDA disclaimer. A new dietary ingredient not marketed before 15 October 1994 needs a notification 75 days before marketing.",
+   "keywords": "united states usa fda dietary supplement export herbal claim new dietary ingredient",
+   "valid_from": "1994-10-25",
+   "jurisdiction": "international"
+  },
+  {
+   "id": "eu_thmpd_overview",
+   "instrument": "eu_thmpd",
+   "section": "Arts. 16a-16c",
+   "title": "Traditional-use registration in the EU",
+   "text_kind": "summary",
+   "text": "Herbal medicinal products can be registered on the basis of traditional use without clinical efficacy trials, if there is evidence of medicinal use for at least 30 years, including at least 15 years within the EU, plus safety and quality data.",
+   "keywords": "european union eu herbal medicine traditional use registration 30 years 15 years export",
+   "valid_from": "2004-04-30",
+   "jurisdiction": "international"
+  },
+  {
+   "id": "eu_novel_food_overview",
+   "instrument": "eu_novel_food",
+   "section": "Arts. 3, 14",
+   "title": "Novel foods in the EU",
+   "text_kind": "summary",
+   "text": "Food not consumed to a significant degree in the EU before 15 May 1997 is a novel food and needs authorisation before sale. Traditional foods from third countries with a 25-year history of safe use can use a notification route.",
+   "keywords": "european union eu novel food food supplement export authorisation traditional food",
+   "valid_from": "2018-01-01",
+   "jurisdiction": "international"
+  }
+ ],
+ "out_of_scope": [
+  "gst",
+  "income tax",
+  "tax",
+  "divorce",
+  "criminal",
+  "bail",
+  "property dispute",
+  "salary",
+  "loan",
+  "visa",
+  "passport",
+  "election",
+  "cricket",
+  "stock",
+  "crypto",
+  "rent",
+  "dosage for",
+  "cure my",
+  "treat my"
+ ]
+}
